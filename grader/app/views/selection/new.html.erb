@@ -1,0 +1,81 @@
+<div class="container">
+<h1>New Student</h1>
+<h2>Note: I will split this up into multiple pages once I implement a controller.</h2>
+
+<h2>Student Form</h2>
+
+<%= form_for :student do |f| %>
+	<div class="row">
+		<%= f.label :f_name %>
+		<%= f.text_field :f_name %>
+	</div>
+	<div class="row">
+		<%= f.label :l_name %>
+		<%= f.text_field :l_name %>
+	</div>
+</div>
+	
+<div class="container">
+	<h2>Course Selection</h2>
+
+<!--<table class="course-select">
+	<tr>
+		<td></td>
+		<td>Course</td>
+		<td>Section Number</td>
+		<td>Professor</td>
+		<td>Time</td>
+		<td>Spots Available</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="class-1" /></td>
+		<td>CSE 2221</td>
+		<td>xxxxxx</td>
+		<td>P. Bucci</td>
+		<td>10:20AM - 11:15AM TWRF</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="class-2" /></td>
+		<td>CSE 2421</td>
+		<td>xxxxxx</td>
+		<td>C. Domas</td>
+		<td>8:00AM - 10:05AM TR</tr>
+		<td>1</td>
+	</tr>
+</table>-->
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-2">Course</div>
+		<div class="col-md-2">Section Number</div>
+		<div class="col-md-2">Professor</div>
+		<div class="col-md-4">Time</div>
+	</div>
+	<!--This part will show all classes that student signed up to grade-->
+	<div class="row">
+		<div class="col-md-1"><input type="checkbox" name="class-1" /></div>
+		<div class="col-md-2">CSE 2221</div>
+		<div class="col-md-2">xxxxxx</div>
+		<div class="col-md-2">P. Bucci</div>
+		<div class="col-md-4">10:20AM - 11:15AM TWRF</div>
+	</div>
+	<!--Options-->
+	<div class="container text-center">
+		<button type="button">Add</button>
+		<button type="button">Modify</button>
+		<button type="button">Delete</button>
+	</div>
+</div>
+
+<div class="container">
+	<h2>When adding or modifying class, this will pop up in separate window</h2>
+	<form>
+		Class: <input name="class-input" /><br />
+		Professor: <input name="professor-input" /><br />
+		Availability: <input name="availability-input" /> <!--Placeholder-->
+	</form>
+		
+</div>
+
+<% end %>
